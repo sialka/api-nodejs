@@ -1,0 +1,18 @@
+{
+  "name": "API-REST",
+  "version": "1.0.0",
+  "description": "Estudo de **API REST em NodeJS** com a Rocketseat,\r neste projeto usamos NodeJS, Express e Mongo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.9"
+  }
+}
