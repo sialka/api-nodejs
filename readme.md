@@ -1,7 +1,6 @@
 # **API REST em NodeJS**
 
-Estudo de **API REST em NodeJS** com a Rocketseat,
-neste projeto usamos NodeJS, Express e Mongo.
+Estudo de **API REST**  com a **RocketSeat**, neste projeto usamos **NodeJS**, **Express** e **Mongo**.
 
 ## **Status**
 
@@ -22,72 +21,74 @@ neste projeto usamos NodeJS, Express e Mongo.
 
 **1. Criando _package.json_**
 
-$ npm init -y
+`$ npm init -y`
 
 **2. Instalando _FrameWork_**
 
-$ npm install express
+`$ npm install express`
 
 **3. Instalando _body-parser_**
 
-Com esse pacote o NodeJS passa a entender as requisições e parametros da URI em JSON.
+Com esse pacote o NodeJS passa a entender as requisições e parâmetros da URI em JSON.
 
-$ npm install body-parser
+`$ npm install body-parser`
 
 **4. Instalando _mongoose_**
 
 Pacote para conectar e persistir dados no MongoDB.
 
-$ npm install mongoose
+`$ npm install mongoose`
 
 **5. Instalando _bcryptjs_**
 
 Pacote para codificar texto, usaremos para codificar a senha do usuário.
 
-$ npm install bcryptjs
+`$ npm install bcryptjs`
 
 **6. Instalando TOKEN JSON AWT**
 
-Pacote para criação de token de autenticação. Usamemos para autenticar a cada requisição. Será enviado no head do protocolo HTTP.
+Pacote para criação de Token de autenticação. Usaremos para autenticar a cada requisição. Será enviado no head do protocolo HTTP.
 
-$ npm install jsonwebtoken
+`$ npm install jsonwebtoken`
 
 **?. Subindo a _API_**
 
-$ node src/index.js
+`$ node src/index.js`
 
 # **Estrutura do Projeto**
 
 ## **DataBase**
 
-**./src/database/index.js**
+`**./src/database/index.js**`
 
 É a parte responsavel pela conexão como banco de dados.
 
 ## **Models**
 
-**./src/models/user.js**
+`**./src/models/user.js**`
 
 É onde fica armazenado o modelo de dados a ser usando no MongoDB.
 
 ## **Controllers**
 
-**./src/controllers/authController.js**
+`**./src/controllers/authController.js**`
 
 Aqui será tratado a camada que irá interagir com entre BD e Servidor.
 
 ## **Config**
 
-**./src/config/auth.json**
+`**./src/config/auth.json**`
 
 É onde fica o arquivo com o Hash usado na criação do Token.
-Esse Hash foi criado aleatoria usando MD5.
+Esse Hash foi criada aleatória usando MD5.
 
 https://www.md5hashgenerator.com/
 
 ## **Middleware**
 
+`**./src/middlewares/auth.js**`
+
 É a interceptação do request antes de chegar no controller.
 Ou seja, o middleware é executado antes do request chegar ao controller.
 
-**./src/middlewares/auth.js**
+
