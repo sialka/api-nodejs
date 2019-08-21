@@ -59,25 +59,25 @@ Pacote para criação de Token de autenticação. Usaremos para autenticar a cad
 
 ## **DataBase**
 
-`**./src/database/index.js**`
+`./src/database/index.js`
 
 É a parte responsavel pela conexão como banco de dados.
 
 ## **Models**
 
-`**./src/models/user.js**`
+`./src/models/user.js`
 
 É onde fica armazenado o modelo de dados a ser usando no MongoDB.
 
 ## **Controllers**
 
-`**./src/controllers/authController.js**`
+`./src/controllers/authController.js`
 
 Aqui será tratado a camada que irá interagir com entre BD e Servidor.
 
 ## **Config**
 
-`**./src/config/auth.json**`
+`./src/config/auth.json`
 
 É onde fica o arquivo com o Hash usado na criação do Token.
 Esse Hash foi criada aleatória usando MD5.
@@ -86,7 +86,7 @@ https://www.md5hashgenerator.com/
 
 ## **Middleware**
 
-`**./src/middlewares/auth.js**`
+`./src/middlewares/auth.js`
 
 É a interceptação do request antes de chegar no controller.
 Ou seja, o middleware é executado antes do request chegar ao controller.

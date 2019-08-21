@@ -2,9 +2,11 @@
 
 Para testar a API usaremos o **Postman**. Depois de baixar, instale importe o **JSON**.
 
-## **EndPoints**
 
-#### **Registro de Usuário**
+
+# **EndPoints**
+
+### **Registro de Usuário**
 
 **Request do tipo POST:**
 
@@ -22,7 +24,7 @@ Para testar a API usaremos o **Postman**. Depois de baixar, instale importe o **
 
 
 
-#### **Autenticar Usuário**
+### **Autenticar Usuário**
 
 **Request do tipo POST:**
 
@@ -39,7 +41,7 @@ Para testar a API usaremos o **Postman**. Depois de baixar, instale importe o **
 
 
 
-#### **Envio de Token**
+### **Envio de Token**
 
 **Request do tipo GET**
 
