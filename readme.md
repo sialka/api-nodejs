@@ -11,7 +11,10 @@ neste projeto usamos NodeJS, Express e Mongo.
 - [x] Salvar novo usuário no MongoDB
 - [x] Encriptar Senha
 - [x] Filtrar e-mail duplicado
-- [ ] Autenticação
+- [x] Criar gerador de Token
+- [x] API devolve Token na criação de usuário
+- [x] API devolve Token na autenticação de usuário
+- [x] Criação de Middlewares para verifição do Token
 - [ ] Recuperação de senha com NodeMailer
 - [ ] CRUD e relacionamentos com MongoDB
 
@@ -43,9 +46,17 @@ Pacote para codificar texto, usaremos para codificar a senha do usuário.
 
 $ npm install bcryptjs
 
+**6. Instalando TOKEN JSON AWT**
+
+Pacote para criação de token de autenticação. Usamemos para autenticar a cada requisição. Será enviado no head do protocolo HTTP.
+
+$ npm install jsonwebtoken
+
 **?. Subindo a _API_**
 
 $ node src/index.js
+
+# **Estrutura do Projeto**
 
 ## **DataBase**
 
@@ -59,8 +70,24 @@ $ node src/index.js
 
 É onde fica armazenado o modelo de dados a ser usando no MongoDB.
 
-## **Controllers**´
+## **Controllers**
 
 **./src/controllers/authController.js**
 
 Aqui será tratado a camada que irá interagir com entre BD e Servidor.
+
+## **Config**
+
+**./src/config/auth.json**
+
+É onde fica o arquivo com o Hash usado na criação do Token.
+Esse Hash foi criado aleatoria usando MD5.
+
+https://www.md5hashgenerator.com/
+
+## **Middleware**
+
+É a interceptação do request antes de chegar no controller.
+Ou seja, o middleware é executado antes do request chegar ao controller.
+
+**./src/middlewares/auth.js**
