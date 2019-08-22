@@ -1,5 +1,5 @@
 // 1. Importando conexão com BD
-const mongoose = require('../database');
+const mongoose = require('../../database');
 
 // 2. Importando Pacote para encriptar texto.
 const bcrypt = require('bcryptjs');
@@ -20,7 +20,15 @@ const UserSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 		select: false,
-	},
+  },
+  passwordResetToken: {
+    type: String,
+    select: false,
+  },
+  passwordResetExpires: {
+    type: Date,
+    select: false,
+  },
 	createdAt: {
 		type: Date,
 		default: Date.now,

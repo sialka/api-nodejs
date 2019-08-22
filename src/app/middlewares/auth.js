@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const authConfig = require('../config/auth.json');
+const authConfig = require('../../config/auth.json');
 
 // (?) O next() só é chamado se alguma codição for satisfeita,
 // com isso ele segue para o controller.
