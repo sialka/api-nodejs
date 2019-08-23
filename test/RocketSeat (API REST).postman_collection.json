@@ -9,25 +9,174 @@
 			"name": "Projeto",
 			"item": [
 				{
-					"name": "Envio do Token",
+					"name": "Listar Projetos",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNWZmYTkyMDVmNGU4MDc4NGY2MThlOCIsImlhdCI6MTU2NjU3MTE1NCwiZXhwIjoxNTY2NjU3NTU0fQ.LA0f5a-ABpLujhcFmbEJBoLz8A-VeM_LSj0Q9LbcRb0",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/projects",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar Projeto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNWZmYTkyMDVmNGU4MDc4NGY2MThlOCIsImlhdCI6MTU2NjU3MTE1NCwiZXhwIjoxNTY2NjU3NTU0fQ.LA0f5a-ABpLujhcFmbEJBoLz8A-VeM_LSj0Q9LbcRb0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/projects/5d602f2afc8a3e2ae817b9f8",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"projects",
+								"5d602f2afc8a3e2ae817b9f8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Projeto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNWZmYTkyMDVmNGU4MDc4NGY2MThlOCIsImlhdCI6MTU2NjU3MTE1NCwiZXhwIjoxNTY2NjU3NTU0fQ.LA0f5a-ABpLujhcFmbEJBoLz8A-VeM_LSj0Q9LbcRb0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
 						"header": [
 							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNWM2MjU3MWYwMmUzMmZlYzBhMjRjMyIsImlhdCI6MTU2NjQwOTc1NSwiZXhwIjoxNTY2NDk2MTU1fQ.l17GzaWoN9aVCcwCsPwbZEzmdcgkL6ehXkY2Ixgf280",
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Trabalho\",\n\t\"description\": \"Tarefas do dia 23/08\",\n\t\"tasks\": [\n\t\t{\n\t\t\t\"title\": \"Concluir todas as aulas de NodeJS\",\n\t\t\t\"assignedTo\": \"5d5b0cf6a25d8c24bc4c43c0\"\n\t\t},\n\t\t{\n\t\t\t\"title\": \"Documentar as Aulas\",\n\t\t\t\"assignedTo\": \"5d5b0cf6a25d8c24bc4c43c0\"\n\t\t}\n\t]\n}"
+						},
 						"url": {
-							"raw": "http://localhost:3000/projects",
-							"protocol": "http",
+							"raw": "{{base_url}}/projects",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "3000",
 							"path": [
 								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Projeto Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNWZmYTkyMDVmNGU4MDc4NGY2MThlOCIsImlhdCI6MTU2NjU3MTE1NCwiZXhwIjoxNTY2NjU3NTU0fQ.LA0f5a-ABpLujhcFmbEJBoLz8A-VeM_LSj0Q9LbcRb0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"New Project\",\n\t\"description\": \"Description of project\",\n\t\"tasks\": [\n\t\t{\n\t\t\t\"title\": \"New Task\",\n\t\t\t\"assignedTo\": \"5d6000d7a9ac831eb03b71cd\"\n\t\t}\n\t]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/projects/5d6030d8f7bfc00be87fa579",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"projects",
+								"5d6030d8f7bfc00be87fa579"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletando Projeto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNWZmYTkyMDVmNGU4MDc4NGY2MThlOCIsImlhdCI6MTU2NjU3MTE1NCwiZXhwIjoxNTY2NjU3NTU0fQ.LA0f5a-ABpLujhcFmbEJBoLz8A-VeM_LSj0Q9LbcRb0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNWZmYTkyMDVmNGU4MDc4NGY2MThlOCIsImlhdCI6MTU2NjU3MTE1NCwiZXhwIjoxNTY2NjU3NTU0fQ.LA0f5a-ABpLujhcFmbEJBoLz8A-VeM_LSj0Q9LbcRb0",
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNWZmYTkyMDVmNGU4MDc4NGY2MThlOCIsImlhdCI6MTU2NjU3MTE1NCwiZXhwIjoxNTY2NjU3NTU0fQ.LA0f5a-ABpLujhcFmbEJBoLz8A-VeM_LSj0Q9LbcRb0",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/projects/5d60113cc5f2442824ff5341",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"projects",
+								"5d60113cc5f2442824ff5341"
 							]
 						}
 					},
@@ -39,7 +188,7 @@
 			"name": "Autenticação",
 			"item": [
 				{
-					"name": "Registro de Usuário",
+					"name": "Criar Usuário",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -52,15 +201,13 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\": \"Renato\",\n\t\"email\": \"renatodiniz@sid.com\",\n\t\"password\": \"123456\"\n}"
+							"raw": "{\n\t\"name\": \"Rubens\",\n\t\"email\": \"g2diniz@sid.com\",\n\t\"password\": \"123456\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:3000/auth/register",
-							"protocol": "http",
+							"raw": "{{base_url}}/auth/register",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "3000",
 							"path": [
 								"auth",
 								"register"
@@ -86,12 +233,10 @@
 							"raw": "{\n\t\"email\": \"ket1@ig.com\",\n\t\"password\": \"001\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:3000/auth/authenticate",
-							"protocol": "http",
+							"raw": "{{base_url}}/auth/authenticate",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "3000",
 							"path": [
 								"auth",
 								"authenticate"
@@ -117,12 +262,10 @@
 							"raw": "{ \n\t\"email\": \"john@ig.com\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:3000/auth/forgot_password",
-							"protocol": "http",
+							"raw": "{{base_url}}/auth/forgot_password",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "3000",
 							"path": [
 								"auth",
 								"forgot_password"
@@ -148,14 +291,11 @@
 							"raw": "{ \n\t\"email\": \"ket1@ig.com\",\n\t\"token\": \"c95ebdd54913be62c51c80af886e5165071e6140\",\n\t\"password\": \"001\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:3000/auth/reset_password",
-							"protocol": "http",
+							"raw": "{{base_url}}auth/reset_password",
 							"host": [
-								"localhost"
+								"{{base_url}}auth"
 							],
-							"port": "3000",
 							"path": [
-								"auth",
 								"reset_password"
 							]
 						}
