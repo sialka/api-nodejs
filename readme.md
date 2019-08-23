@@ -16,8 +16,9 @@ Estudo de **API REST**  com a **RocketSeat**, neste projeto usamos **NodeJS**, *
 - [x] Criação de **Middlewares** para verificação do Token
 - [x] Implementar esqueci a senha para o usuário
 - [x] Enviar e-mail com Token para resete de senha
-- [x] Mudar a senha do usuário 
-- [ ] CRUD e relacionamentos com Mongo
+- [x] Mudar a senha do usuário
+- [x] CRUD
+- [x] Relacionamentos com Mongo
 
 ## **Passo a Passo**
 
@@ -82,8 +83,10 @@ Esse pacote nos permite criar templates de e-mails.
 ## **<u>Models</u>**
 
 `./src/app/models/user.js`
+`./src/app/models/project.js`
+`./src/app/models/task.js`
 
-Contem o **schema** ou modelo de dados para armazenamento de usuários no **Mongo**.
+Contem os **schemas** ou modelos de dados para armazenamento de usuários, projetos e tarefas no **Mongo**.
 
 ## **<u>Controllers</u>**
 
