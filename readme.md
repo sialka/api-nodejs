@@ -74,7 +74,7 @@ Esse pacote nos permite criar templates de e-mails.
 
 `$ npm install nodemailer-express-handlebars`
 
-**?. Subindo a _API_**
+**10. Subindo a _API_**
 
 `$ node src/index.js`
 
